@@ -1,0 +1,38 @@
+const express = require('express');
+const app = express();
+const PORT = 8000;
+
+const funFacts = {
+    'dogs': {
+        'fun fact 1':'a dog\'s sense of smell is at least 40 times better than ours. they have upwards of 300 million olfactory receptors in their noses.',
+        'fun fact 2':'Dogs can sniff while they breathe. Their noses are designed so air can move in and out at the same time, unlike us humans who have to either breathe in OR out only.'
+    },
+
+    'cats': {
+        'fun fact 1':'We have 206 bones - cats on average have 244.',
+        'fun fact 2':'A house cat is genetically 95.6% Tiger.'
+    },
+
+    'tattoos': {
+        'fun fact 1':'During a tattoo session, our skin gets pricked anywhere between 50 to 3000 times each miinute.',
+        'fun fact 2':'The first tattoo machine was created in 1891 and got its inspiration from Thomas Edison\'s electric pen.'
+    }
+}
+
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/index.html')
+})
+
+app.get('/api/:subject', (req, res)=> {
+    const subjects = req.params.subject.toLowerCase()   
+    if (funFacts[subjects]) {
+        res.json(funFacts[subjects])
+    } else {
+        res.json('Invalid Subject Choice')
+    }
+    //res.json(funFacts)
+})
+
+app.listen(process.env.PORT || PORT, ()=>{
+    console.log(`The server is running on port ${PORT}, you better go catch it!`)
+})
