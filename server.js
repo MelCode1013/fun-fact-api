@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const PORT = 8000;
 
@@ -19,8 +20,10 @@ const funFacts = {
     }
 }
 
+app.use(cors())
+
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html')
+    res.sendFile('index.html')
 })
 
 app.get('/api/:subject', (req, res)=> {
