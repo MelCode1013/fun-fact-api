@@ -8,7 +8,7 @@ async function apiRequest(clickID){
         const data = await res.json()
 
         console.log(data)
-        console.log(document.querySelector('h2').innerHTML = data[randomFast()])
+        console.log(document.querySelector('h2').innerHTML = data[randomFact()])
     }catch(error){
         console.log(error)
     }
