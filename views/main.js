@@ -1,5 +1,6 @@
 alert('working')
 
+const sources = ['https://www.pdsa.org.uk/what-we-do/blog/10-amazing-facts-about-dogs']
 
 async function apiRequest(clickID){
     let subject = clickID
@@ -23,3 +24,5 @@ function randomFact() {
         return 'fun fact 2'
     }
 }
+
+console.log("Sources I used for fun facts:", sources)

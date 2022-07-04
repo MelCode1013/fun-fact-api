@@ -3,6 +3,7 @@ const cors = require('cors');
 const app = express();
 const PORT = 8000;
 
+
 const funFacts = {
     'dogs': {
         'fun fact 1':'a dog\'s sense of smell is at least 40 times better than ours. they have upwards of 300 million olfactory receptors in their noses.',
@@ -19,6 +20,10 @@ const funFacts = {
         'fun fact 2':'The first tattoo machine was created in 1891 and got its inspiration from Thomas Edison\'s electric pen.'
     }
 }
+
+app.use(express.static('views')) 
+app.use(express.urlencoded({ extended: true})) 
+app.use(express.json())
 
 app.use(cors())
 
