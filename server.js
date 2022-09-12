@@ -21,8 +21,8 @@ const funFacts = {
     },
 
     'planet': {
-        'fun fact 1':'During a tattoo session, our skin gets pricked anywhere between 50 to 3000 times each miinute.',
-        'fun fact 2':'The first tattoo machine was created in 1891 and got its inspiration from Thomas Edison\'s electric pen.'
+        'fun fact 1':'Earth is not a perfect sphere.As the National Oceanic and Atmospheric Administration (NOAA) points out, Earth spins while gravity pushes toward the center and a centrifugal force, perpendicular to Earth\'s axis, pushes out. This results in a bit of a tilted shape—not a perfect sphere.',
+        'fun fact 2':'Earth is about 4.54 billion years old.'
     }
 }
 
