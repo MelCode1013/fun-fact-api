@@ -21,7 +21,7 @@ const funFacts = {
     },
 
     'planet': {
-        'fun fact 1':'Earth is not a perfect sphere.As the National Oceanic and Atmospheric Administration (NOAA) points out, Earth spins while gravity pushes toward the center and a centrifugal force, perpendicular to Earth\'s axis, pushes out. This results in a bit of a tilted shape—not a perfect sphere.',
+        'fun fact 1':'Earth is not a perfect sphere. As the National Oceanic and Atmospheric Administration (NOAA) points out, Earth spins while gravity pushes toward the center and a centrifugal force, perpendicular to Earth\'s axis, pushes out. This results in a bit of a tilted shape—not a perfect sphere.',
         'fun fact 2':'Earth is about 4.54 billion years old.'
     }
 }
