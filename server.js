@@ -18,31 +18,40 @@ const funFacts = {
     'tattoos': {
         'fun fact 1':'During a tattoo session, our skin gets pricked anywhere between 50 to 3000 times each miinute.',
         'fun fact 2':'The first tattoo machine was created in 1891 and got its inspiration from Thomas Edison\'s electric pen.'
+    },
+
+    'planet': {
+        'fun fact 1':'During a tattoo session, our skin gets pricked anywhere between 50 to 3000 times each miinute.',
+        'fun fact 2':'The first tattoo machine was created in 1891 and got its inspiration from Thomas Edison\'s electric pen.'
     }
 }
 
-app.use(express.static('views')) 
-app.use(express.urlencoded({ extended: true})) 
-app.use(express.json())
+//app.use(express.static('js'))
+//app.use(express.urlencoded({ extended: true})) 
+//app.use(express.json())
 
 app.use(cors())
 
-app.use(express.static(__dirname + '/js'));
+//app.use(express.static(__dirname + '/js'));
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html')
-})
+        res.sendFile(__dirname + '/index.html')
+        })
+
+
 
 app.get('/api/:subject', (req, res)=> {
     const subjects = req.params.subject.toLowerCase()   
-    if (funFacts[subjects]) {
+        if (funFacts[subjects]) {
         res.json(funFacts[subjects])
-    } else {
+        } else {
         res.json('Invalid Subject Choice')
-    }
+        }
     //res.json(funFacts)
-})
+        })
 
+  
 app.listen(process.env.PORT || PORT, ()=>{
     console.log(`The server is running on port ${PORT}, you better go catch it!`)
-})
+    })
+    
